@@ -24,6 +24,7 @@ class RestoranBungar {
 				"Kambing Guling Spesial" };
 		double[] hargaMakanan = { 9999.99, 12345.67, 21108.40, 13579.13, 98765.43 };
 
+
 		for (int i = 0; i < menuMakanan.length; i++) {
 			System.out.printf("%d. %s - Rp %.2f\n", i + 1, menuMakanan[i], hargaMakanan[i]);
 		}
