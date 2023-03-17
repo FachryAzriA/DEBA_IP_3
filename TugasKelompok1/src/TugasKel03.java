@@ -14,7 +14,7 @@ public class TugasKel03 {
         double hargakwetiauw = 13579.13;
         double hargakambing = 98765.43;
         int jlhnasgor, jlhayam, jlhsteak, jlhkwetiauw, jlhkambing;
-        String name;
+        // String name;
 
         Scanner myObj = new Scanner(System.in);
         System.out.print("Selamat Siang...\n\nPesan untuk berapa orang\t: ");
