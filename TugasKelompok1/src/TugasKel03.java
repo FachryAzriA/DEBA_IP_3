@@ -1,6 +1,9 @@
-package TugasKelompok1.src;
+// package TugasKelompok1.src;
 
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class TugasKel03 {
     public static void main(String[] args) {
@@ -11,6 +14,8 @@ public class TugasKel03 {
         double hargakwetiauw = 13579.13;
         double hargakambing = 98765.43;
         int jlhnasgor, jlhayam, jlhsteak, jlhkwetiauw, jlhkambing;
+        String name;
+
         Scanner myObj = new Scanner(System.in);
         System.out.print("Selamat Siang...\n\nPesan untuk berapa orang\t: ");
         int jlorg = myObj.nextInt();
