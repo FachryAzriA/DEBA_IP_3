@@ -38,6 +38,12 @@ class RestoranBungar {
 		for (int i = 0; i < menuMakanan.length; i++) {
 			System.out.printf("%d. %s = ", i + 1, menuMakanan[i]);
 			jumlahPesanan[i] = input.nextInt();
+
+			if(jumlahPesanan[i] > 10){
+				System.out.println("Pesanan tidak boleh lebih dari 10");
+				System.out.printf("%d. %s = ", i + 1, menuMakanan[i]);
+				jumlahPesanan[i] = input.nextInt();
+			}
 		}
 
 		input.nextLine();
