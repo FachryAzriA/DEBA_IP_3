@@ -18,12 +18,13 @@ public class TugasKel03 {
         myObj.nextLine();
         String name = myObj.nextLine();
         System.out.println("Menu Spesial hari ini \n===========================================");
-        System.out.println("1. Nasi Goreng Spesial\t\t\t\t@ Rp."+harganasgor);
-        System.out.println("2. Ayam Bakar Spesial\t\t\t\t@ Rp."+hargaayam);
-        System.out.println("3. Steak Sirloin Spesial\t\t\t@ Rp."+hargasteak);
-        System.out.println("4. Kwetiaw Siram Spesial\t\t\t@ Rp."+hargakwetiauw);
-        System.out.println("5. Kambing Guling Spesial\t\t\t@ Rp."+hargakambing);
+        System.out.println("1. Nasi Goreng Spesial\t\t\t\t@ Rp." + harganasgor);
+        System.out.println("2. Ayam Bakar Spesial\t\t\t\t@ Rp." + hargaayam);
+        System.out.println("3. Steak Sirloin Spesial\t\t\t@ Rp." + hargasteak);
+        System.out.println("4. Kwetiaw Siram Spesial\t\t\t@ Rp." + hargakwetiauw);
+        System.out.println("5. Kambing Guling Spesial\t\t\t@ Rp." + hargakambing);
         System.out.println(jlorg);
         System.out.println(name);
+        System.out.println("Pesanan Anda [batas pesanan 0-10 porsi]");
     }
 }
