@@ -39,6 +39,7 @@ class RestoranBungar {
 			System.out.printf("%d. %s = ", i + 1, menuMakanan[i]);
 			jumlahPesanan[i] = input.nextInt();
 
+			// kondisi tidak boleh ada pesanan lebih dari 10
 			if(jumlahPesanan[i] > 10){
 				System.out.println("Pesanan tidak boleh lebih dari 10");
 				System.out.printf("%d. %s = ", i + 1, menuMakanan[i]);
