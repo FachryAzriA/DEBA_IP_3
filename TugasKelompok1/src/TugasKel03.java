@@ -1,3 +1,5 @@
+package TugasKelompok1.src;
+
 import java.util.Scanner;
 
 public class TugasKel03 {
