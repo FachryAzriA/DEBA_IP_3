@@ -4,13 +4,10 @@ class RestoranBungar {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Test punya yesika");
-		System.out.println("Selamat Datang di Restoran BUNGAR");
-		System.out.println("\n");
-
-		System.out.print("Pesan untuk berapa orang : ");
+		System.out.println("Selamat Siang...");
+		System.out.print("Pesan untuk berapa orang \t: ");
 		int orang = input.nextInt();
-		System.out.print("Pesanan atas nama : ");
+		System.out.print("Pesanan atas nama \t\t\t: ");
 		String nama = input.nextLine();
 		input.nextLine();
 
@@ -22,11 +19,11 @@ class RestoranBungar {
 		String[] menuMakanan = { "Nasi Goreng Spesial", "Ayam Bakar Spesial",
 				"Steak Sirloin Spesial", "Kwetiaw Siram Spesial",
 				"Kambing Guling Spesial" };
-		double[] hargaMakanan = { 9999.99, 12345.67, 21108.40, 13579.13, 98765.43 };
+		double[] hargaMakanan = { 09999.99, 12345.67, 21108.40, 13579.13, 98765.43 };
 
 
 		for (int i = 0; i < menuMakanan.length; i++) {
-			System.out.printf("%d. %s - Rp %.2f\n", i + 1, menuMakanan[i], hargaMakanan[i]);
+			System.out.printf("%d. %-30s @ Rp %.2f\n", i + 1, menuMakanan[i],hargaMakanan[i]);
 		}
 
 		System.out.println("");
@@ -36,7 +33,7 @@ class RestoranBungar {
 		System.out.println("Pesanan Anda [batas pesanan 0-10 porsi]");
 		int[] jumlahPesanan = new int[5];
 		for (int i = 0; i < menuMakanan.length; i++) {
-			System.out.printf("%d. %s = ", i + 1, menuMakanan[i]);
+			System.out.printf("%d. %-30s = ", i + 1, menuMakanan[i]);
 			jumlahPesanan[i] = input.nextInt();
 
 			// kondisi tidak boleh ada pesanan lebih dari 10
@@ -57,8 +54,8 @@ class RestoranBungar {
 
 		// Hitung total pembelian
 		double totalPembelian = 0;
-		for (double harga : hargaPembelian) {
-			totalPembelian += harga;
+		for (int i = 0; i < hargaPembelian.length; i++) {
+			totalPembelian += hargaPembelian[i];
 		}
 
 		// Hitung harga diskon dan total pembelian setelah diskon
