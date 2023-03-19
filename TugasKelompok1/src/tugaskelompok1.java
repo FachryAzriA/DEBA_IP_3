@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-class RestoranBungar {
+public class tugaskelompok1 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Selamat Siang...");
 		System.out.print("Pesan untuk berapa orang \t: ");
 		int orang = input.nextInt();
-		System.out.print("Pesanan atas nama \t\t\t: ");
+		System.out.print("Pesanan atas nama \t\t: ");
 		String nama = input.nextLine();
 		input.nextLine();
 
@@ -21,9 +21,8 @@ class RestoranBungar {
 				"Kambing Guling Spesial" };
 		double[] hargaMakanan = { 09999.99, 12345.67, 21108.40, 13579.13, 98765.43 };
 
-
 		for (int i = 0; i < menuMakanan.length; i++) {
-			System.out.printf("%d. %-30s @ Rp %.2f\n", i + 1, menuMakanan[i],hargaMakanan[i]);
+			System.out.printf("%d. %-30s @ Rp %.2f\n", i + 1, menuMakanan[i], hargaMakanan[i]);
 		}
 
 		System.out.println("");
@@ -37,7 +36,7 @@ class RestoranBungar {
 			jumlahPesanan[i] = input.nextInt();
 
 			// kondisi tidak boleh ada pesanan lebih dari 10
-			if(jumlahPesanan[i] > 10){
+			if (jumlahPesanan[i] > 10) {
 				System.out.println("Pesanan tidak boleh lebih dari 10");
 				System.out.printf("%d. %s = ", i + 1, menuMakanan[i]);
 				jumlahPesanan[i] = input.nextInt();
