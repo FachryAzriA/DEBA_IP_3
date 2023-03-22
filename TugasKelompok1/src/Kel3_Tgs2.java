@@ -103,7 +103,7 @@ public class Kel3_Tgs2
                 ArrayList<Integer> array_fibonachi = new ArrayList<Integer>(Arrays.asList(bilangan_fibonaci_array));
                 array_fibonachi.add(angka_pertama);
                 bilangan_fibonaci_array = array_fibonachi.toArray(bilangan_fibonaci_array);
-                jml_fibonaci = jml_fibonaci + sum;
+                jml_fibonaci = jml_fibonaci + angka_pertama;
             }
 
             System.out.println(jml_inputan + " Bilangan Genap : ");
