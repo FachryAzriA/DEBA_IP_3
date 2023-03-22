@@ -15,15 +15,16 @@ import java.util.*;
 public class Kel3_Tgs2
 {
     public static void main(String[] args)
-            throws IOException
-    {
+            throws IOException {
         // inisialisasi variabel
-        String  nama_mhs,
+        String nama_mhs,
                 nim_mhs;
         int jml_inputan,
                 jml_ganjil = 0,
                 jml_genap = 0,
-                jml_fibonaci = 0;
+                jml_fibonaci = 0,
+                angka_pertama = 0,
+                angka_kedua = 1;
         Integer bilangan_genap_array[] = {},
                 bilangan_ganjil_array[] = {},
                 bilangan_fibonaci_array[] = {};
@@ -37,8 +38,7 @@ public class Kel3_Tgs2
         nama_mhs = reader.readLine();
 
         // validasi agar nama mahasiswa tidak lebih dari 25 karakter
-        while(nama_mhs.length() > 25)
-        {
+        while (nama_mhs.length() > 25) {
             System.out.println("Nama tidak boleh lebih dari 25 karakter");
             System.out.print("Masukan nama Anda [1..25] : ");
             nama_mhs = reader.readLine();
@@ -47,8 +47,7 @@ public class Kel3_Tgs2
         nim_mhs = reader.readLine();
 
         // validasi agar nim tidak lebih dari 10 karakter
-        while(nim_mhs.length() > 10)
-        {
+        while (nim_mhs.length() > 10) {
             System.out.println("NIM tidak boleh lebih dari 10 karakter");
             System.out.print("Masukan nama Anda [1..25] : ");
             nim_mhs = reader.readLine();
@@ -64,8 +63,7 @@ public class Kel3_Tgs2
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
         // validasi agar inputan antara 5 sampai 20
-        while(jml_inputan > 20 || jml_inputan < 5)
-        {
+        while (jml_inputan > 20 || jml_inputan < 5) {
             System.out.println("Jumlah input harus diantara 5 sampai 20");
             System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             System.out.print("Masukan sembarang angka [5..20]: ");
@@ -75,12 +73,11 @@ public class Kel3_Tgs2
         System.out.println("Deret Bilangan");
         System.out.println("#######################");
 
+
         // logic pencarian bilangan ganjil-genap
-        for(int i=1;i<=jml_inputan*2;i++)
-        {
+        for (int i = 1; i <= jml_inputan * 2; i++) {
             // kalau hasil bagi atau modulo = 0 berarti dia genap
-            if(i % 2 == 0)
-            {
+            if (i % 2 == 0) {
                 ArrayList<Integer> array_genap = new ArrayList<Integer>(Arrays.asList(bilangan_genap_array));
                 array_genap.add(i);
                 bilangan_genap_array = array_genap.toArray(bilangan_genap_array);
@@ -89,22 +86,34 @@ public class Kel3_Tgs2
 
             }
             // kalau sebaliknya berarti ganjil
-            else
-            {
+            else {
                 ArrayList<Integer> array_ganjil = new ArrayList<Integer>(Arrays.asList(bilangan_ganjil_array));
                 array_ganjil.add(i);
                 bilangan_ganjil_array = array_ganjil.toArray(bilangan_ganjil_array);
                 jml_ganjil = jml_ganjil + i; // mencari jumlah ganjil
-                // System.out.println("Deret Bilangan " + jml_ganjil);
+//                 System.out.println("Deret Bilangan " + jml_ganjil);
             }
         }
+        //logic fibonachi
+        for (int i = 1; i <= jml_inputan; ++i) {
+            {
+                int sum = angka_pertama + angka_kedua;
+                angka_pertama = angka_kedua;
+                angka_kedua = sum;
+                ArrayList<Integer> array_fibonachi = new ArrayList<Integer>(Arrays.asList(bilangan_fibonaci_array));
+                array_fibonachi.add(angka_pertama);
+                bilangan_fibonaci_array = array_fibonachi.toArray(bilangan_fibonaci_array);
+                jml_fibonaci = jml_fibonaci + sum;
+            }
 
-        System.out.println(jml_inputan + " Bilangan Genap : ");
-        System.out.println(""+Arrays.toString(bilangan_genap_array));
-        System.out.println("Hasil penjumlahan : " + jml_genap);
-        System.out.println(jml_inputan + " Bilangan Ganjil : ");
-        System.out.println(""+Arrays.toString(bilangan_ganjil_array));
-        System.out.println("Hasil penjumlahan : " + jml_ganjil);
-
+            System.out.println(jml_inputan + " Bilangan Genap : ");
+            System.out.println("" + Arrays.toString(bilangan_genap_array));
+            System.out.println("Hasil penjumlahan : " + jml_genap);
+            System.out.println(jml_inputan + " Bilangan Ganjil : ");
+            System.out.println("" + Arrays.toString(bilangan_ganjil_array));
+            System.out.println("Hasil penjumlahan : " + jml_ganjil);
+            System.out.println("" + Arrays.toString(bilangan_fibonaci_array));
+            System.out.println("Hasil penjumlahan : " + jml_fibonaci);
+        }
     }
 }
