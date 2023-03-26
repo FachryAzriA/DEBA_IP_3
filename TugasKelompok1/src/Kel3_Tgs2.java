@@ -1,7 +1,7 @@
 /*
     Kelompok 3 Tugas 2
     - Fachry Azri Arrasyid (2602265211)
-    -
+    - Nesta Waldemar Binardo Tambunan (2602265136)
     -
     -
     -
