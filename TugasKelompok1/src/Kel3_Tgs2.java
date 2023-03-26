@@ -2,8 +2,8 @@
     Kelompok 3 Tugas 2
     - Fachry Azri Arrasyid (2602265211)
     - Nesta Waldemar Binardo Tambunan (2602265136)
-    -
-    -
+    - Renanda Diva Acereistanti (2602269986)
+    - Fahrudin Aris Wicaksono (2602269260)
     - Yesika Rodearni Simarmata (2602270073)
 */
 
