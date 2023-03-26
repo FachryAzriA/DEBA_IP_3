@@ -38,7 +38,7 @@ public class Kel3_Tgs2 {
             System.out.print("Masukan nama Anda [1..25] : ");
             nama_mhs = reader.readLine();
 
-            // validasi agar nama mahasiswa tidak lebih dari 25 karakter
+            // validasi agar nama mahasiswa antara 1 sampai 25 karakter
             while (nama_mhs.length() > 25 || nama_mhs.length() < 1) {
                 System.out.println("Nama tidak boleh kurang dari 1 atau lebih dari 25 karakter");
                 System.out.print("Masukan nama Anda [1..25] : ");
@@ -47,7 +47,7 @@ public class Kel3_Tgs2 {
             System.out.print("Masukan NIM Anda : ");
             nim_mhs = reader.readLine();
 
-            // validasi agar nim tidak lebih dari 10 karakter
+            // validasi agar nim harus 10 karakter
             while (nim_mhs.length() != 10) {
                 System.out.println("NIM harus 10 karakter");
                 System.out.print("Masukan NIM Anda kembali : ");
