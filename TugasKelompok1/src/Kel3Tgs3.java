@@ -30,8 +30,9 @@ public class Kel3Tgs3 {
             System.out.println("Level 1");
             System.out.println("=======");
 
-            // Pilihan Ulang Program
-            System.out.print("Anda ingin mengulang (Y/T) : ");
+            // User tidak berhasil melewati level
+            System.out.println("You Lose!! Try Again...");
+            System.out.print("Do you want to retry [y/t] ? ");
             input.nextLine();
             char ulang = input.nextLine().charAt(0);
             pilihan = Character.toUpperCase(ulang);
