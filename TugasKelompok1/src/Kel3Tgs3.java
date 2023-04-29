@@ -26,9 +26,11 @@ public class Kel3Tgs3
                                         ,"idle","lied","tide","tied","tile"
                                         ,"tilde","tiled","title","tilted","titled"},
                  arr_InputWord_lvl1,
-                 arr_AnswerWord_lvl2,
+                 arr_AnswerWord_lvl2 = {"sec","can","cane","scan","scene",
+                                        "case","cease","acne","canes","seen","see","sane","ease"},
                  arr_InputWord_lvl2,
-                 arr_AnswerWord_lvl3,
+                 arr_AnswerWord_lvl3= {"honk","honker","roe","ore","her",
+                                        "hen","one","hero","hoke","kern","heron","ken"},
                  arr_InputWord_lvl3;
 
         // inisialisasi penggunaan buffer reader untuk string
@@ -55,6 +57,33 @@ public class Kel3Tgs3
             scores_lvl1 = m.CoepoeLvl1(scores_lvl1,arr_InputWord_lvl1,arr_AnswerWord_lvl1);
 
             if(scores_lvl1 < 70)
+            {
+                System.out.println("You lose !! Try again ");
+            }
+
+            // inisiasi array level 2
+            arr_InputWord_lvl2 = new String[10];
+            CoepoeLv2_Class m2 = new CoepoeLv2_Class();
+            v_debug = 1;
+
+            // level 2
+            scores_lvl2 = m2.CoepoeLvl2(scores_lvl2,arr_InputWord_lvl2,arr_AnswerWord_lvl2);
+
+            if(scores_lvl2 < 70)
+            {
+                System.out.println("You lose !! Try again ");
+            }
+
+
+            // inisiasi array level 3
+            arr_InputWord_lvl3 = new String[10];
+            CoepoeLv3_Class m3 = new CoepoeLv3_Class();
+            v_debug = 1;
+
+            // level 3
+            scores_lvl3 = m3.CoepoeLvl3(scores_lvl3,arr_InputWord_lvl3,arr_AnswerWord_lvl3);
+
+            if(scores_lvl3 < 70)
             {
                 System.out.println("You lose !! Try again ");
             }
@@ -142,6 +171,145 @@ public class Kel3Tgs3
                 }
             }
             return p_scores_lvl1;
+        }
+    }
+
+
+    public static class CoepoeLv2_Class {
+        // inisialisasi penggunaan buffer reader untuk string
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        // inisialisasi penggunaan scanner untuk integer
+        Scanner scanner = new Scanner(System.in);
+
+        // function level2
+        public int CoepoeLvl2(int p_scores_lvl2, String[] p_input_array_lvl2, String[] p_answer_word_lvl2) throws IOException {
+            // cek kata. Kalau 0 berarti enggak ada. Kalau 1 ada
+            int word_check = 0;
+
+            System.out.println(" n a c e s e ");
+            // iterasi 10 kali kesempatan menjawab
+            for (int i = 1; i <= 10; i++) {
+                System.out.print(i + "> your answer : ");
+                // String jawaban = String.valueOf(scanner.next().charAt(0));
+                String jawaban = scanner.nextLine();
+
+
+
+                // string harus antara 3 sampai 6 karakter
+                while (jawaban.length() < 3 || jawaban.length() > 6 )
+                {
+                    // System.out.print("Panjang string : "+jawaban.length());
+                    System.out.println("Character length must be between 3 and 6.");
+                    System.out.println(i + "> your answer : ");
+                    jawaban = scanner.nextLine();
+                }
+
+
+                // cek udah pernah diinput atau belum
+                for(String j : p_input_array_lvl2)
+                {
+                    if(jawaban.toLowerCase().equals(j))
+                    {
+                        word_check = 1;
+                        break;
+                    }
+                }
+
+
+                // cocokin jawaban dengan kunci jawaban
+                for (String j : p_answer_word_lvl2)
+                {
+                    // kalau ada yang sama dan tidak berulang
+                    if(jawaban.toLowerCase().equals(j))
+                    {
+                        // kalau belum di input
+                        if(word_check == 0)
+                        {
+                            p_scores_lvl2 += 10;
+                            System.out.println("#RIGHT your score : "+p_scores_lvl2);
+                            p_input_array_lvl2[i] = jawaban;
+                            break;
+                        }
+                        // kalau udah diinput
+                        else
+                        {
+                            System.out.println(" You had already type this word before ..");
+                            word_check = 0;
+                        }
+                    }
+                }
+            }
+            return p_scores_lvl2;
+        }
+    }
+
+    
+    
+    public static class CoepoeLv3_Class {
+        // inisialisasi penggunaan buffer reader untuk string
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        // inisialisasi penggunaan scanner untuk integer
+        Scanner scanner = new Scanner(System.in);
+
+        // function level 3
+        public int CoepoeLvl3(int p_scores_lvl3, String[] p_input_array_lvl3, String[] p_answer_word_lvl3) throws IOException {
+            // cek kata. Kalau 0 berarti enggak ada. Kalau 1 ada
+            int word_check = 0;
+
+            System.out.println(" n a c e s e ");
+            // iterasi 10 kali kesempatan menjawab
+            for (int i = 1; i <= 10; i++) {
+                System.out.print(i + "> your answer : ");
+                // String jawaban = String.valueOf(scanner.next().charAt(0));
+                String jawaban = scanner.nextLine();
+
+
+
+                // string harus antara 3 sampai 6 karakter
+                while (jawaban.length() < 3 || jawaban.length() > 6 )
+                {
+                    // System.out.print("Panjang string : "+jawaban.length());
+                    System.out.println("Character length must be between 3 and 6.");
+                    System.out.println(i + "> your answer : ");
+                    jawaban = scanner.nextLine();
+                }
+
+
+                // cek udah pernah diinput atau belum
+                for(String j : p_input_array_lvl3)
+                {
+                    if(jawaban.toLowerCase().equals(j))
+                    {
+                        word_check = 1;
+                        break;
+                    }
+                }
+
+
+                // cocokin jawaban dengan kunci jawaban
+                for (String j : p_answer_word_lvl3)
+                {
+                    // kalau ada yang sama dan tidak berulang
+                    if(jawaban.toLowerCase().equals(j))
+                    {
+                        // kalau belum di input
+                        if(word_check == 0)
+                        {
+                            p_scores_lvl3 += 10;
+                            System.out.println("#RIGHT your score : "+p_scores_lvl3);
+                            p_input_array_lvl3[i] = jawaban;
+                            break;
+                        }
+                        // kalau udah diinput
+                        else
+                        {
+                            System.out.println(" You had already type this word before ..");
+                            word_check = 0;
+                        }
+                    }
+                }
+            }
+            return p_scores_lvl3;
         }
     }
 }
