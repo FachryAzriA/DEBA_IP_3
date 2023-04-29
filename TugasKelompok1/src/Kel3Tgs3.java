@@ -42,7 +42,8 @@ public class Kel3Tgs3 {
             System.out.println("Rules : ");
             System.out.println("1. Create a word using given character, min 3 characters and max 6 characters.");
             System.out.println("2. Each level. You have 10 changes to answer correctly");
-            System.out.println("3. To get through next level, you have to score minimum 70 point each level");
+            System.out.println("3. To get through next level, you have to score minimum 70 point each level.");
+            System.out.println("");
 
             // inisiasi array level 1
             arr_InputWord_lvl1 = new String[10];
@@ -76,6 +77,8 @@ public class Kel3Tgs3 {
             // cek kata. Kalau 0 berarti enggak ada. Kalau 1 ada
             int word_check = 0;
 
+            System.out.println("Level 1");
+            System.out.println("-------");
             System.out.println(" t e d t l i ");
             // iterasi 10 kali kesempatan menjawab
             for (int i = 1; i <= 10; i++) {
