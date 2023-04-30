@@ -50,7 +50,7 @@ public class Kel3Tgs3 {
             System.out.println("");
 
             // inisiasi array level 1
-            arr_InputWord_lvl1 = new String[10];
+            arr_InputWord_lvl1 = new String[15];
             CoepoeLvl_Class m = new CoepoeLvl_Class();
             v_debug = 1;
 
@@ -67,7 +67,7 @@ public class Kel3Tgs3 {
             {
                 System.out.println(" ");
                 // inisiasi array level 2
-                arr_InputWord_lvl2 = new String[10];
+                arr_InputWord_lvl2 = new String[15];
                 v_debug = 2;
 
                 // level 2
@@ -84,7 +84,7 @@ public class Kel3Tgs3 {
             {
                 // inisiasi array level 3
                 System.out.println(" ");
-                arr_InputWord_lvl3 = new String[10];
+                arr_InputWord_lvl3 = new String[15];
                 v_debug = 3;
 
                 // level 2
@@ -106,7 +106,7 @@ public class Kel3Tgs3 {
 
         } catch (Exception e) {
             System.out.println("Ada yang salah dengan program yang Anda jalankan");
-            System.out.println("Program terdapat masalah.");
+            System.out.println("Program terdapat masalah : " + e);
             System.out.println("lihat pada poin v_debug = " + v_debug);
             System.out.println(" ");
         }
@@ -127,57 +127,66 @@ public class Kel3Tgs3 {
             // cek kata. Kalau 0 berarti enggak ada. Kalau 1 ada
             int word_check = 0;
 
+            try
+            {
+                System.out.println("Level 1");
+                System.out.println("-------");
+                System.out.println(" t e d t l i ");
+                // iterasi 10 kali kesempatan menjawab
+                for (int i = 1; i <= 10; i++)
+                {
+                    System.out.print(i + "> your answer : ");
+                    // String jawaban = String.valueOf(scanner.next().charAt(0));
+                    String jawaban = scanner.nextLine();
 
-            System.out.println("Level 1");
-            System.out.println("-------");
-            System.out.println(" t e d t l i ");
-            // iterasi 10 kali kesempatan menjawab
-            for (int i = 1; i <= 10; i++) {
-                System.out.print(i + "> your answer : ");
-                // String jawaban = String.valueOf(scanner.next().charAt(0));
-                String jawaban = scanner.nextLine();
-
-                // string harus antara 3 sampai 6 karakter
-                while (jawaban.length() < 3 || jawaban.length() > 6) {
-                    // System.out.print("Panjang string : "+jawaban.length());
-                    System.out.println("Character length must be between 3 and 6.");
-                    System.out.println(i + "> your answer : ");
-                    jawaban = scanner.nextLine();
-                }
-
-                /*
-                 * if(jawaban.toLowerCase().equals(p_answer_word_lvl1[0]))
-                 * {
-                 * System.out.println("Sama");
-                 * }
-                 */
-
-                // cek udah pernah diinput atau belum
-                for (String j : p_input_array_lvl1) {
-                    if (jawaban.toLowerCase().equals(j)) {
-                        word_check = 1;
-                        break;
+                    // string harus antara 3 sampai 6 karakter
+                    while (jawaban.length() < 3 || jawaban.length() > 6) {
+                        // System.out.print("Panjang string : "+jawaban.length());
+                        System.out.println("Character length must be between 3 and 6.");
+                        System.out.println(i + "> your answer : ");
+                        jawaban = scanner.nextLine();
                     }
-                }
 
-                // cocokin jawaban dengan kunci jawaban
-                for (String j : p_answer_word_lvl1) {
-                    // kalau ada yang sama dan tidak berulang
-                    if (jawaban.toLowerCase().equals(j)) {
-                        // kalau belum di input
-                        if (word_check == 0) {
-                            v_scores_lvl1 += 10;
-                            System.out.println("#RIGHT your score : " + v_scores_lvl1);
-                            p_input_array_lvl1[i] = jawaban;
+                    /*
+                     * if(jawaban.toLowerCase().equals(p_answer_word_lvl1[0]))
+                     * {
+                     * System.out.println("Sama");
+                     * }
+                     */
+
+                    // cek udah pernah diinput atau belum
+                    for (String j : p_input_array_lvl1) {
+                        if (jawaban.toLowerCase().equals(j)) {
+                            word_check = 1;
                             break;
                         }
-                        // kalau udah diinput
-                        else {
-                            System.out.println(" You had already type this word before ..");
-                            word_check = 0;
+                    }
+
+                    // cocokin jawaban dengan kunci jawaban
+                    for (String j : p_answer_word_lvl1) {
+                        // kalau ada yang sama dan tidak berulang
+                        if (jawaban.toLowerCase().equals(j)) {
+                            // kalau belum di input
+                            if (word_check == 0) {
+                                v_scores_lvl1 += 10;
+                                System.out.println("#RIGHT your score : " + v_scores_lvl1);
+                                p_input_array_lvl1[i] = jawaban;
+                                break;
+                            }
+                            // kalau udah diinput
+                            else {
+                                System.out.println(" You had already type this word before ..");
+                                word_check = 0;
+                            }
                         }
                     }
                 }
+            }
+
+            catch (Exception e)
+            {
+                System.out.println("Ada yang salah dengan program yang Anda jalankan : "+e);
+                System.out.println(" ");
             }
             return v_scores_lvl1;
         }
