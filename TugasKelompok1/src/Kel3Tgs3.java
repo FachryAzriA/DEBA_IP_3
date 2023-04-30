@@ -169,6 +169,7 @@ public class Kel3Tgs3 {
                     }
                 }
             }
+            System.out.printf("You had answered 10 time with %d right answers...\n", v_scores_lvl1 / 10);
             return v_scores_lvl1;
         }
 
@@ -229,7 +230,7 @@ public class Kel3Tgs3 {
                     }
                 }
             }
-            System.out.printf("You had answered 10 time with %d right answers...", v_scores_lvl2 / 10);
+            System.out.printf("You had answered 10 time with %d right answers...\n", v_scores_lvl2 / 10);
             return v_scores_lvl2;
         }
 
@@ -290,7 +291,7 @@ public class Kel3Tgs3 {
                     }
                 }
             }
-            System.out.printf("You had answered 10 time with %d right answers...", v_scores_lvl3 / 10);
+            System.out.printf("You had answered 10 time with %d right answers... \n", v_scores_lvl3 / 10);
             return v_scores_lvl3;
         }
     }
