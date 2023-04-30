@@ -15,7 +15,8 @@ import java.util.*;
 
 public class Kel3Tgs3 {
     public static void main(String[] args) {
-        int scores_lvl1 = 0,
+        int pilihan,
+                scores_lvl1 = 0,
                 scores_lvl2 = 0,
                 scores_lvl3 = 0,
                 v_debug = 0,
@@ -60,6 +61,10 @@ public class Kel3Tgs3 {
             // kalau skor lvl 1 kurang dari 70 gak bisa lanjut ke lvl 2
             if (scores_lvl1 < 70) {
                 System.out.println("You lose !! Try again ");
+                System.out.println("Do you want to retry? [y/t] ?");
+                scanner.nextLine();
+                char ulang = scanner.nextLine().charAt(0);
+                pilihan = Character.toUpperCase(ulang);
                 v_ngulang = 1;
             } else {
                 System.out.println(" ");
@@ -74,6 +79,10 @@ public class Kel3Tgs3 {
             // kalau skor lvl 2 kurang dari 70 gak bisa lanjut ke lvl 3
             if (scores_lvl2 < 70) {
                 System.out.println("You lose !! Try again ");
+                System.out.println("Do you want to retry? [y/t] ?");
+                scanner.nextLine();
+                char ulang = scanner.nextLine().charAt(0);
+                pilihan = Character.toUpperCase(ulang);
                 v_ngulang = 1;
             } else {
                 // inisiasi array level 3
@@ -88,6 +97,10 @@ public class Kel3Tgs3 {
             // kalau skor lvl 3 kurang dari 70 berarti dianggap kalah
             if (scores_lvl3 < 70) {
                 System.out.println("You lose !! Try again ");
+                System.out.println("Do you want to retry? [y/t] ?");
+                scanner.nextLine();
+                char ulang = scanner.nextLine().charAt(0);
+                pilihan = Character.toUpperCase(ulang);
                 v_ngulang = 1;
             } else {
                 System.out.println("Overall score :  " + (scores_lvl3 + scores_lvl2 + scores_lvl1));
@@ -170,6 +183,7 @@ public class Kel3Tgs3 {
                 }
             }
             System.out.printf("You had answered 10 time with %d right answers...\n", v_scores_lvl1 / 10);
+            // System.out.println(Arrays.toString(arr_AnswerWord_lvl1) + " ");
             return v_scores_lvl1;
         }
 
