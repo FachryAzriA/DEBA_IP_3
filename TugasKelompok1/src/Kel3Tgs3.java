@@ -25,11 +25,11 @@ public class Kel3Tgs3 {
         String[] arr_AnswerWord_lvl1 = { "die", "led", "lei", "let", "lid", "lie", "lit", "tie", "deli", "diet", "edit",
                 "tilt", "idle", "lied", "tide", "tied", "tile", "tilde", "tiled", "title", "tilted", "titled" },
                 arr_InputWord_lvl1,
-                arr_AnswerWord_lvl2 = {"sec","can","cane","scan","scene",
-                                        "case","cease","acne","canes","seen","see","sane","ease"},
+                arr_AnswerWord_lvl2 = { "sec", "can", "cane", "scan", "scene",
+                        "case", "cease", "acne", "canes", "seen", "see", "sane", "ease" },
                 arr_InputWord_lvl2,
-                arr_AnswerWord_lvl3= {"honk","honker","roe","ore","her",
-                                        "hen","one","hero","hoke","kern","heron","ken"},
+                arr_AnswerWord_lvl3 = { "honk", "honker", "roe", "ore", "her",
+                        "hen", "one", "hero", "hoke", "kern", "heron", "ken" },
                 arr_InputWord_lvl3;
 
         // inisialisasi penggunaan buffer reader untuk string
@@ -58,13 +58,10 @@ public class Kel3Tgs3 {
             scores_lvl1 = m.CoepoeLvl1(arr_InputWord_lvl1, arr_AnswerWord_lvl1);
 
             // kalau skor lvl 1 kurang dari 70 gak bisa lanjut ke lvl 2
-            if (scores_lvl1 < 70)
-            {
+            if (scores_lvl1 < 70) {
                 System.out.println("You lose !! Try again ");
                 v_ngulang = 1;
-            }
-            else
-            {
+            } else {
                 System.out.println(" ");
                 // inisiasi array level 2
                 arr_InputWord_lvl2 = new String[10];
@@ -75,13 +72,10 @@ public class Kel3Tgs3 {
             }
 
             // kalau skor lvl 2 kurang dari 70 gak bisa lanjut ke lvl 3
-            if (scores_lvl2 < 70)
-            {
+            if (scores_lvl2 < 70) {
                 System.out.println("You lose !! Try again ");
                 v_ngulang = 1;
-            }
-            else
-            {
+            } else {
                 // inisiasi array level 3
                 System.out.println(" ");
                 arr_InputWord_lvl3 = new String[10];
@@ -92,13 +86,10 @@ public class Kel3Tgs3 {
             }
 
             // kalau skor lvl 3 kurang dari 70 berarti dianggap kalah
-            if (scores_lvl3 < 70)
-            {
+            if (scores_lvl3 < 70) {
                 System.out.println("You lose !! Try again ");
                 v_ngulang = 1;
-            }
-            else
-            {
+            } else {
                 System.out.println("Overall score :  " + (scores_lvl3 + scores_lvl2 + scores_lvl1));
                 System.out.println("You win !!! ");
                 System.out.println("press enter to exit");
@@ -126,7 +117,6 @@ public class Kel3Tgs3 {
                 throws IOException {
             // cek kata. Kalau 0 berarti enggak ada. Kalau 1 ada
             int word_check = 0;
-
 
             System.out.println("Level 1");
             System.out.println("-------");
@@ -179,6 +169,7 @@ public class Kel3Tgs3 {
                     }
                 }
             }
+            System.out.printf("You had answered 10 time with %d right answers...", v_scores_lvl1 / 10);
             return v_scores_lvl1;
         }
 
@@ -239,6 +230,7 @@ public class Kel3Tgs3 {
                     }
                 }
             }
+            System.out.printf("You had answered 10 time with %d right answers...", v_scores_lvl2 / 10);
             return v_scores_lvl2;
         }
 
@@ -299,6 +291,7 @@ public class Kel3Tgs3 {
                     }
                 }
             }
+            System.out.printf("You had answered 10 time with %d right answers...", v_scores_lvl3 / 10);
             return v_scores_lvl3;
         }
     }
