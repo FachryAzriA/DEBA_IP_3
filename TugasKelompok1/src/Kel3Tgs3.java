@@ -50,7 +50,7 @@ public class Kel3Tgs3 {
             System.out.println("");
 
             // inisiasi array level 1
-            arr_InputWord_lvl1 = new String[10];
+            arr_InputWord_lvl1 = new String[15];
             CoepoeLvl_Class m = new CoepoeLvl_Class();
             v_debug = 1;
 
@@ -64,7 +64,7 @@ public class Kel3Tgs3 {
             } else {
                 System.out.println(" ");
                 // inisiasi array level 2
-                arr_InputWord_lvl2 = new String[10];
+                arr_InputWord_lvl2 = new String[15];
                 v_debug = 2;
 
                 // level 2
@@ -78,7 +78,7 @@ public class Kel3Tgs3 {
             } else {
                 // inisiasi array level 3
                 System.out.println(" ");
-                arr_InputWord_lvl3 = new String[10];
+                arr_InputWord_lvl3 = new String[15];
                 v_debug = 3;
 
                 // level 2
@@ -97,7 +97,7 @@ public class Kel3Tgs3 {
 
         } catch (Exception e) {
             System.out.println("Ada yang salah dengan program yang Anda jalankan");
-            System.out.println("Program terdapat masalah.");
+            System.out.println("Program terdapat masalah : " + e);
             System.out.println("lihat pada poin v_debug = " + v_debug);
             System.out.println(" ");
         }
@@ -169,7 +169,6 @@ public class Kel3Tgs3 {
                     }
                 }
             }
-            System.out.printf("You had answered 10 time with %d right answers...", v_scores_lvl1 / 10);
             return v_scores_lvl1;
         }
 
