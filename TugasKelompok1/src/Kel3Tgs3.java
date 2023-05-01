@@ -63,8 +63,8 @@ public class Kel3Tgs3 {
                 System.out.println("You lose !! Try again ");
                 System.out.println("Do you want to retry? [y/t] ?");
                 scanner.nextLine();
-                char ulang = scanner.nextLine().charAt(0);
-                pilihan = Character.toUpperCase(ulang);
+                // char ulang = scanner.nextLine().charAt(0);
+                // pilihan = Character.toUpperCase(ulang);
                 v_ngulang = 1;
             } else {
                 System.out.println(" ");
@@ -81,8 +81,8 @@ public class Kel3Tgs3 {
                 System.out.println("You lose !! Try again ");
                 System.out.println("Do you want to retry? [y/t] ?");
                 scanner.nextLine();
-                char ulang = scanner.nextLine().charAt(0);
-                pilihan = Character.toUpperCase(ulang);
+                // char ulang = scanner.nextLine().charAt(0);
+                // pilihan = Character.toUpperCase(ulang);
                 v_ngulang = 1;
             } else {
                 // inisiasi array level 3
@@ -99,8 +99,8 @@ public class Kel3Tgs3 {
                 System.out.println("You lose !! Try again ");
                 System.out.println("Do you want to retry? [y/t] ?");
                 scanner.nextLine();
-                char ulang = scanner.nextLine().charAt(0);
-                pilihan = Character.toUpperCase(ulang);
+                // char ulang = scanner.nextLine().charAt(0);
+                // pilihan = Character.toUpperCase(ulang);
                 v_ngulang = 1;
             } else {
                 System.out.println("Overall score :  " + (scores_lvl3 + scores_lvl2 + scores_lvl1));
