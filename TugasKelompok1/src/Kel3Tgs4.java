@@ -71,8 +71,14 @@ public class Kel3Tgs4 {
         }
     }
 
-    public static void printData(int[] data) {
-        System.out.println("Data: " + Arrays.toString(data));
+    public static void printData(int[] data)
+    {
+        System.out.print("Data: ");
+        for (Integer j :  data) {
+            System.out.print(" " + j);
+        }
+        System.out.println(" ");
+       //  System.out.println("Data: " + Arrays.toString(data));
     }
 
     public static void bubbleSortAscending(int[] data) {
